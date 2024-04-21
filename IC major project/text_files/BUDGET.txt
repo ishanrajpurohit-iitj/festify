@@ -1,0 +1,20 @@
+
+
+               Budget Report               
+Starting Budget: 1000000.000000
+Category of the expense : Food
+Amount of the expense : 200000.000000
+
+Total Expenses :200000.000000
+Remainig Budget : 800000.000000
+
+
+
+               Budget Report               
+Starting Budget: 800000.000000
+Category of the expense : Entertainment
+Amount of the expense : 500000.000000
+
+Total Expenses :700000.000000
+Remainig Budget : 300000.000000
+
