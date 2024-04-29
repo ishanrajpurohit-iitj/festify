@@ -163,7 +163,7 @@ void displayparticipants(){
         return;
     }
     char line[100];
-    printf("Tickets:\n");
+    printf("Participants:\n");
     while (fgets(line, sizeof(line),file)) {
         printf("%s",line);
     }
@@ -181,7 +181,7 @@ void display_budget() {
         return;
     }
     char line[100];
-    printf("Tickets:\n");
+    printf("Budget:\n");
     while (fgets(line, sizeof(line),file)) {
         printf("%s",line);
     }
@@ -227,7 +227,7 @@ void generateBudgetReport() {
         printf("Error opening file.\n");
         return;
     }
-    fprintf(ptr,"\n\n               Budget Report               \n");
+  
     fprintf(ptr, "Starting Budget: %f\n",budget);
     fprintf(ptr, "Category of the expense : %s\n",expenses.category);
     fprintf(ptr ,"Amount of the expense : %f\n\n",expenses.amount);
@@ -390,9 +390,10 @@ void deleteEvent() {
     while(fgets(str1,150,fptr)!=NULL){
         char *delim = ",";
         char *token = strtok(str1,delim);
-        // char c = "";
+      
         if (strcmp(token,str)!=0){
             fprintf(ptr,"%s,%s",token,token +strlen(token)+1);
+           //fprintf(ptr,"%s\n",str1);
         }
 
     }
@@ -436,14 +437,14 @@ void bookRoom() {
     fflush(stdin);
     int room_num;
     char event_name[50];
-    printf("Enter the stall number you want to book: ");
+    printf("Enter the room number you want to book: ");
     scanf("%d", &room_num);
-    printf("Enter Event: ");
+    // printf("Enter Event: ");
     fflush(stdin);
-    fgets(event_name, sizeof(event_name), stdin);
-    if(strlen(event_name)!=49){
-        event_name[strlen(event_name) - 1] = '\0';
-    }
+    // fgets(event_name, sizeof(event_name), stdin);
+    // if(strlen(event_name)!=49){
+    //     event_name[strlen(event_name) - 1] = '\0';
+    // }
 
     FILE *tempFile = fopen("text_files/temp.txt", "w");
     if (tempFile==NULL) {
